@@ -2,6 +2,8 @@ const palette = document.getElementById("palette")
 const btn = document.getElementById("generateBtn")
 const sizeSelect = document.getElementById("size")
 const toast = document.getElementById("toast")
+const formatSelect = document.getElementById("format")
+
 
 function randomHex(){
 
@@ -14,15 +16,24 @@ for(let i=0;i<6;i++){color += letters[Math.floor(Math.random()*16)]
 return color
 }
 
+function randomHSL() {
+  const h = Math.floor(Math.random() * 360)   // tono
+  const s = Math.floor(Math.random() * 100)   // saturación
+  const l = Math.floor(Math.random() * 100)   // luz
+
+  return `hsl(${h}, ${s}%, ${l}%)`
+}
+
 function generatePalette(){
 
 const size = sizeSelect.value
+const format = formatSelect.value
 
 palette.innerHTML = ""
 
 for(let i=0;i<size;i++){
 
-const color = randomHex()
+const color = format === "hex" ? randomHex() : randomHSL()
 
 const div = document.createElement("div")
 
