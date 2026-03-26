@@ -53,17 +53,23 @@ gap: 10px;
 padding:20px;
 }
 
-.color-box{
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-width:120px;
-height:120px;
-border-radius:8px;
-display:flex;
-align-items:end;
-justify-content:center;
-color:white;
-font-weight:bold;
-padding-bottom:10px;
+.color-box {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  color: var(--text-color, white); 
+  font-weight: bold;
+  padding-bottom: 10px;
+  transition: transform 0.2s; 
+}
+
+.color-box.light-bg {
+  --text-color: #1a1a2e; 
+  text-shadow: none;
 }
 
 .toast{
