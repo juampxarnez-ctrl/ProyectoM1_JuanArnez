@@ -4,6 +4,24 @@ const sizeSelect = document.getElementById("size")
 const toast = document.getElementById("toast")
 const formatSelect = document.getElementById("format")
 
+function isLight(color, format) {
+if (format === "hex") {
+  const hex = color.replace("#", "");
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness > 128;
+    } else {
+       
+  const parts = color.match(/\d+/g);
+  const l = parseInt(parts[2]); 
+      return l > 65; // 
+    }
+}
+
+
 
 function randomHex(){
 
@@ -38,6 +56,8 @@ const color = format === "hex" ? randomHex() : randomHSL()
 const div = document.createElement("div")
 
 div.classList.add("color-box")
+
+div.classList.toggle("light-bg", isLight(color, format));
 
 div.style.background = color
 
