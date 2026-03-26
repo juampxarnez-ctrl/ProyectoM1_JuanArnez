@@ -9,17 +9,15 @@ Funcionalidades principales:
 -Cambio de formato de color (HEX o HSL)
 -Visualización de cada color junto a su código
 -Copiado de color al hacer click
--Feedback visual mediante notificaciones (toast)
 
 Tecnologías utilizadas:
 
--HTML5 (estructura semántica)
--CSS3 (diseño, layout y estilos)
--JavaScript (DOM, eventos, lógica de generación)
--Git y GitHub (control de versiones)
+-HTML5 
+-CSS3 
+-JavaScript 
+-Git y GitHub 
 
-
-Breve estructura del proyecto
+Breve estructura del proyecto:
 proyecto-m1-ArnezJuan/
 │
 ├── index.html
@@ -29,7 +27,7 @@ proyecto-m1-ArnezJuan/
 ▶ Cómo usar:
 
 -Clonar el repositorio
-git clone https://github.com/juampxarnez-ctrl/ProyectoM1_JuanArnez.git
+-git clone https://github.com/juampxarnez-ctrl/ProyectoM1_JuanArnez.git
 -Abrir el archivo index.html en el navegador
 -Seleccionar tamaño de la paleta
 -Formato de color (HEX o HSL)
