@@ -16,18 +16,10 @@
 * ![JavaScript] 
 * ![Git-y-GitHub] 
 
-### Breve estructura del proyecto:
-
-proyecto-m1-ArnezJuan/
-│
-├── index.html
-├── styles.css
-├── script.js
-
 ### Cómo usar:
 
 * **Clonar el repositorio**
-* **git clone https://github.com/juampxarnez-ctrl/ProyectoM1_JuanArnez.git**+
+* **git clone https://github.com/juampxarnez-ctrl/ProyectoM1_JuanArnez.git**
 * **Abrir el archivo index.html en el navegador**
 * **Seleccionar tamaño de la paleta**
 * **Formato de color (HEX o HSL)**
