@@ -11,10 +11,10 @@
 
 ### Tecnologías utilizadas:
 
-* ![HTML5] 
-* ![CSS3] 
-* ![JavaScript] 
-* ![Git-y-GitHub] 
+* [HTML5] 
+* [CSS3] 
+* [JavaScript]
+* [Git-y-GitHub]
 
 ### Cómo usar:
 
