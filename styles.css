@@ -9,6 +9,7 @@ body {
   color: white;
 }
 
+/* Header */
 header {
   background: linear-gradient(90deg, #0f3460, #533483);
   color: white;
@@ -16,6 +17,11 @@ header {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+header h1 {
+  margin: 0;
+}
+
+/* Main */
 main {
   margin: 1rem;
   padding: 1rem;
@@ -24,6 +30,7 @@ main {
   border-radius: 12px;
 }
 
+/* Controles */
 .controls {
   display: flex;
   flex-direction: column;
@@ -37,6 +44,12 @@ button {
   max-width: 250px;
 }
 
+select {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+}
+
 button {
   padding: 0.75rem 1rem;
   cursor: pointer;
@@ -45,13 +58,19 @@ button {
   color: white;
   border-radius: 60px;
   font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
 
 button:focus {
   outline: 3px solid #00aaff;
 }
 
+/* Paleta */
 #palette {
   display: flex;
   flex-wrap: wrap;
@@ -65,13 +84,22 @@ button:focus {
   height: 90px;
   border-radius: 10px;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 8px;
-  font-size: 0.75rem;
+  padding: 6px;
+  text-align: center;
+  word-break: break-word;
+  font-size: 0.7rem;
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(0,0,0,.3);
   color: var(--text-color, white);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
 }
 
 .color-box.light-bg {
@@ -79,22 +107,34 @@ button:focus {
   text-shadow: none;
 }
 
+/* Toast */
 .toast {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: black;
+  background: rgba(0,0,0,.9);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity .3s ease;
+  pointer-events: none;
+  z-index: 1000;
 }
 
 .toast.show {
   opacity: 1;
 }
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  color: rgba(255,255,255,.85);
+}
+
+/* Tablet */
 @media (min-width: 768px) {
 
   .controls {
@@ -109,8 +149,13 @@ button:focus {
     font-size: 0.85rem;
   }
 }
+
+/* Desktop */
 @media (min-width: 1024px) {
 
+   .toast {
+    bottom: 100px;
+  }
   .color-box {
     width: 120px;
     height: 120px;
